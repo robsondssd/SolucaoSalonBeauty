@@ -29,5 +29,8 @@ namespace SalonbeautyWeb.Models
         {
             return new ApplicationDbContext();
         }
+
+        public virtual DbSet<Cliente> Cliente { get; set; }
+
     }
 }

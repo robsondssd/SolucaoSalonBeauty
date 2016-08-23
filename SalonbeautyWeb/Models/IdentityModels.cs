@@ -23,6 +23,7 @@ namespace SalonbeautyWeb.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer(new DropCreateDatabaseAlways<ApplicationDbContext>());
         }
 
         public static ApplicationDbContext Create()
@@ -30,7 +31,13 @@ namespace SalonbeautyWeb.Models
             return new ApplicationDbContext();
 
         }
-        public class DatabaseContext : DbContext {  public DatabaseContext() { Database.SetInitializer( new DropCreateDatabaseAlways<DatabaseContext>()); } } 
+        //public class DatabaseContext : DbContext
+        //{
+        //    public DatabaseContext()
+        //    {
+        //        Database.SetInitializer(new DropCreateDatabaseAlways<DatabaseContext>());
+        //    }
+        //}
 
         public virtual DbSet<Cliente> Cliente { get; set; }
 

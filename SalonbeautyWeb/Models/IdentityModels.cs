@@ -28,7 +28,9 @@ namespace SalonbeautyWeb.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+
         }
+        public class DatabaseContext : DbContext {  public DatabaseContext() { Database.SetInitializer( new DropCreateDatabaseAlways<DatabaseContext>()); } } 
 
         public virtual DbSet<Cliente> Cliente { get; set; }
 

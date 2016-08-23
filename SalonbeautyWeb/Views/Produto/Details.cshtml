@@ -1,0 +1,66 @@
+﻿@model SalonbeautyWeb.Models.Produto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produto</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoDeVenda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrecoDeVenda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QtdMinima)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QtdMinima)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QtdAtual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QtdAtual)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

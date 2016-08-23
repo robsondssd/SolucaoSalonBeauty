@@ -29,17 +29,15 @@ namespace SalonbeautyWeb.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
-
         }
-        //public class DatabaseContext : DbContext
-        //{
-        //    public DatabaseContext()
-        //    {
-        //        Database.SetInitializer(new DropCreateDatabaseAlways<DatabaseContext>());
-        //    }
-        //}
-
         public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<Servico> Servico { get; set; }
+        public virtual DbSet<TipoDeServico> TipoDeServico { get; set; }
+        public virtual DbSet<Funcionario> Funcionario { get; set; }
+        public virtual DbSet<Fornecedores> Fornecedores { get; set; }
+        public virtual DbSet<Produto> Produto { get; set; }
+        public virtual DbSet<NotaFiscal> NotaFiscal { get; set; }
+        public virtual DbSet<Fatura> Fatura { get; set; }
 
     }
 }
